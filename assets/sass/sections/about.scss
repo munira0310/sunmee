@@ -1,0 +1,37 @@
+@use "../abstract/mixins";
+@use "../abstract/variables" as vars;
+.about {
+  width: 83.5%;
+  height: 640px;
+  margin-left: auto;
+  padding-right: 12px;
+  padding-bottom: 80px;
+   .about__left {
+    padding: 0 100px 0 0;
+    @include mixins.flex-center(unset, flex-end);
+    flex-direction: column;
+    .title {
+      margin-bottom: 25px;
+    }
+  }
+  .about__right {
+    overflow: hidden;
+    img {
+      width: 100%;
+      object-fit: fill;
+      height: 100%;
+      border-radius: 10px !important;
+    }
+  }
+  @include mixins.media-xl {
+    width: 90%;
+    margin: 0 auto;
+    height: unset;
+    padding: 40px 0;
+  }
+  @include mixins.media-lg {
+    .about__left {
+      padding: 0;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64.617" height="70" viewBox="0 0 64.617 70">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.689" y1="0.237" x2="0" y2="1.053" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffaf24"/>
+      <stop offset="1" stop-color="#ed1a56"/>
+    </linearGradient>
+  </defs>
+  <path id="Контур_303" data-name="Контур 303" d="M32.94,1842.286H44.955v-4.231l.941-.469a15.691,15.691,0,1,0-13.9,0l.941.469Zm27.787,5.438-7.1-7.1,2.4-2.4,7.1,7.1Zm-38.594-38.6-7.1-7.1,2.4-2.4,7.1,7.1-2.4,2.4Zm-4.7,38.6-2.4-2.4,7.1-7.1,2.4,2.4-7.1,7.1Zm38.592-38.6-2.4-2.4,7.1-7.1,2.4,2.4Zm-18.644-7.722h3.393V1791.37H37.383ZM6.77,1825.373H16.806v-3.39H6.77Zm54.583,0H71.387v-3.39H61.353v3.39Zm-29.894-1.7H28.066A10.891,10.891,0,0,1,38.947,1812.8v3.393A7.5,7.5,0,0,0,31.459,1823.678Zm3.819,34.3h7.338l2.338-2.069v-3.443H32.94v3.443Zm8.624,3.393h-9.91l-4.443-3.936v-8.362h18.8v8.362Zm4.448-15.691h-18.8v-5.553a19.083,19.083,0,1,1,18.8,0v5.553Z" transform="translate(-6.77 -1791.37)" fill-rule="evenodd" fill="url(#linear-gradient)"/>
+</svg>

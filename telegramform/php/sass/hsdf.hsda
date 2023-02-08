@@ -1,0 +1,36 @@
+
+
+  }
+price .content_price .content-image {
+    width: 75%;
+    overflow: hidden;
+    display: flex;
+    height: 48%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 1000px;
+
+
+  
+
+  // img
+
+    
+.price .content_price .content-image img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: left center;
+    object-position: left center;
+    width: 100%;
+}

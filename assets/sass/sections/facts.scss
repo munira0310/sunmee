@@ -1,0 +1,46 @@
+@use "../abstract/mixins";
+@use "../abstract/variables" as vars;
+.facts {
+  padding: 80px 0;
+  .title {
+    margin-bottom: 70px;
+  }
+  .fact__content {
+    @include mixins.flex-center(center);
+    flex-direction: column;
+    border-right: 4px solid vars.$factsColor;
+    &:last-child {
+      border: unset;
+    }
+  }
+  .facts__title {
+    text-align: left;
+    font: normal normal 600 92px vars.$bitterFont;
+    letter-spacing: 0px;
+    color: vars.$factsColor;
+    span {
+      font-size: 54px;
+    }
+  }
+  .facts__icon {
+    font-size: 35px;
+    color: vars.$factsColor;
+  }
+  .g__text {
+    margin-top: 25px;
+    text-align: center;
+  }
+  @include mixins.media-lg {
+    background-color: #f2eee0;
+    padding: 30px 0;
+    .title {
+      margin-bottom: 30px;
+    }
+    .fact__content {
+      border: unset;
+    }
+    .facts__title {
+      font-size: 54px;
+    }
+  }
+}

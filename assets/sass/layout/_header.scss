@@ -1,0 +1,53 @@
+@use "../abstract/variables" as vars;
+@use "../abstract/mixins";
+.header {
+  background-color: vars.$lightColor;
+  .container {
+    @include mixins.flex-center(center, space-between);
+    height: 180px;
+    .header__logo {
+      width: 204px;
+      height: 100%;
+      object-fit: contain;
+    }
+    .header__left {
+      @include mixins.flex-center(center);
+      .header__menu {
+        @include mixins.flex-center(center);
+      }
+      .header__menu__list__item {
+        a {
+          text-align: left;
+          font: normal 400 16px vars.$bitterFont;
+          letter-spacing: 1.28px;
+          color: vars.$menuItemColor;
+          opacity: 1;
+          padding: 0 25px;
+          text-transform: uppercase;
+        }
+      }
+      .header__button {
+        background: vars.$greenColor;
+        margin-left: 25px;
+      }
+    }
+  }
+
+  @include mixins.media-xl {
+    .container .header__left {
+      .header__menu__list__item {
+        a {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  @include mixins.media-lg {
+    .container {
+      justify-content: center;
+    }
+    .container .header__left {
+      display: none;
+    }
+  }
+}

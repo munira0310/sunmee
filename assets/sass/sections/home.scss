@@ -1,0 +1,102 @@
+@use "../abstract/mixins";
+@use "../abstract/variables" as vars;
+.home {
+  background: url("../images/home.jpg");
+  background-repeat: no-repeat;
+  height: calc(100vh - 180px);
+  background-size: 100% 100%;
+  @include mixins.flex-center(center);
+  .home__content {
+    .mini__text {
+      text-align: left;
+      font: normal 500 30px vars.$bitterFont;
+      color: vars.$redColor;
+      opacity: 1;
+    }
+    h1 {
+      text-align: left;
+      font: normal 60px vars.$bitterFont;
+      letter-spacing: 0px;
+      color: vars.$menuItemColor;
+      span {
+        font-weight: 600;
+      }
+    }
+    .drop__down {
+      position: relative;
+      .drop__down__btn {
+        background: vars.$redColor;
+        .angle__icon {
+          transition: 0.5s;
+        }
+      }
+      .drop__down__menu {
+        border-radius: 8px;
+        position: absolute;
+        width: 245px;
+        background-color: vars.$lightColor;
+        top: 110%;
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.5s;
+        .drop__down__item {
+          a {
+            display: block;
+            color: vars.$menuItemColor;
+            padding: 0 16px 10px;
+            font-family: vars.$bitterFont;
+            font-weight: 500;
+            &.first {
+              padding-top: 10px;
+            }
+          }
+        }
+      }
+      &.active {
+        .drop__down__menu {
+          max-height: 500px;
+        }
+        .angle__icon {
+          transform: rotate(-180deg);
+        }
+      }
+    }
+  }
+  @include mixins.media-md {
+    background-size: cover;
+    .home__content {
+      .mini__text {
+        display: block;
+        text-align: center;
+      }
+      h1 {
+        font-size: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        br {
+          display: none;
+        }
+      }
+      .drop__down {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}
+.home__bottom {
+  font-family: vars.$bitterFont;
+  padding: 30px 10px;
+  background-color: vars.$redColor;
+  text-align: center;
+  letter-spacing: 0px;
+  font-size: 22px;
+  color: vars.$lightColor;
+  span {
+    font-weight: 500;
+  }
+  @include mixins.media-md {
+    font-size: 18px;
+  }
+}

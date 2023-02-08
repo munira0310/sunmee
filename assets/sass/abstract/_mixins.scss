@@ -1,0 +1,28 @@
+@mixin flex-center($align: unset, $items: unset) {
+  display: flex;
+  align-items: $align;
+  justify-content: $items;
+}
+@mixin media-sm {
+  @media screen and (max-width: 576px) {
+    @content;
+  }
+}
+
+@mixin media-md {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin media-lg {
+  @media screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin media-xl {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}

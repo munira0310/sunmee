@@ -1,0 +1,80 @@
+@use "../abstract/mixins";
+@use "../abstract/variables" as vars;
+.info {
+  padding: 60px 0;
+  .info__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .info__content__item {
+    display: flex;
+    align-items: center;
+    height: 120px;
+    padding: 0 30px;
+    &.bordered {
+      border: 1px dashed;
+    }
+    p {
+      margin: 0;
+    }
+  }
+  img {
+    height: 70px;
+    width: 70px;
+    display: block;
+    margin-right: 30px;
+  }
+  @include mixins.media-md {
+    padding: 30px 0;
+    .title {
+      br {
+        display: none;
+      }
+    }
+    .info__content {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .info__content__item {
+      border: unset !important;
+      height: 80px;
+      padding: 0;
+      p {
+        font-weight: 600;
+      }
+    }
+    img {
+      margin-right: 10px;
+    }
+  }
+}
+.manual {
+  padding: 100px;
+  height: 100vh;
+  background-image: url("../images/manual.jpg");
+  background-size: cover;
+  background-position: center center;
+  span {
+    font-weight: 600;
+  }
+  .manual__btn {
+    background: vars.$greenColor;
+  }
+  @include mixins.media-lg {
+    padding: 30px 0;
+    height: auto;
+    .title {
+      margin-bottom: 30px;
+      br {
+        display: none;
+      }
+    }
+  }
+  @include mixins.media-lg {
+    .title {
+      br {
+        display: none;
+      }
+    }
+  }
+  
+}

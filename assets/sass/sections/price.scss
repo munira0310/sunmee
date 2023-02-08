@@ -1,0 +1,67 @@
+@use "../abstract/mixins";
+@use "../abstract/variables" as vars;
+.price {
+  padding: 50px 0;
+  background-color: #f5f5f5;
+  .order__bg {
+    object-fit: contain;
+  }
+}
+.price__box {
+  padding: 0 0 0 100px;
+  > p {
+    text-align: left;
+    font: normal 28px vars.$bitterFont;
+    letter-spacing: 0.84px;
+    color: #151515;
+    margin-bottom: 0;
+    &.red {
+      color: vars.$redColor;
+    }
+  }
+  .price__box__child {
+    margin-bottom: 20px;
+    @include mixins.flex-center(center);
+    p {
+      text-align: left;
+      font: 400 63px vars.$bitterFont;
+      letter-spacing: 0px;
+      margin: 0;
+      margin-right: 20px;
+      &.line {
+        text-decoration: line-through;
+      }
+      &.red {
+        color: vars.$redColor;
+        font-size: 73px;
+      }
+    }
+    span {
+      text-align: left;
+      font: 25px vars.$bitterFont;
+      &.red {
+        font-size: 35px;
+        color: vars.$redColor;
+      }
+    }
+  }
+}
+
+@include mixins.media-lg {
+  .price__box {
+    padding: 0;
+    p {
+      text-align: center;
+      font-size: 22px;
+    }
+    .price__box__child {
+      justify-content: center;
+      p {
+        font-size: 34px;
+        &.red {
+          font-size: 48px;
+        }
+      }
+    }
+  }
+}

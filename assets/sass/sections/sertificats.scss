@@ -1,0 +1,11 @@
+@use "../abstract/mixins";
+.sertificats {
+  padding: 60px 0;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  @include mixins.media-md {
+    padding: 40px 0;
+  }
+}
